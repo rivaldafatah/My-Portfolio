@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Rivalda Fatah Rachman Hernawan</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <style>
+    /* Dark Mode Styling */
+    body {
+      background-color: #121212;
+      color: #ffffff;
+      overflow-x: hidden;
+    }
+    .navbar, .footer, .jumbotron {
+      background-color: #1f1f1f;
+    }
+    .navbar-light .navbar-brand, .navbar-light .navbar-nav .nav-link {
+      color: #ffffff !important;
+    }
+
+    /* Jumbotron with GIF Background */
+    .jumbotron {
+      padding: 3rem 1rem;
+      text-align: center;
+      color: #ffffff;
+      position: relative;
+      overflow: hidden;
+      background-image: url('video/computer.gif');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 100vh;
+    }
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-top: 40px;
+      border: 3px solid #ffffff;
+    }
+
+    /* Typing Animation */
+    .typing {
+      display: inline-block;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 3px solid;
+      max-width: 100%;
+      animation: typing 4s steps(30, end), blink 0.75s step-end infinite, typing-repeat 10s infinite;
+    }
+    @keyframes typing {
+      from { max-width: 0; }
+      to { max-width: 100%; }
+    }
+    @keyframes typing-repeat {
+      0% { max-width: 0; }
+      70% { max-width: 100%; }
+      80% { max-width: 100%; }
+      90% { max-width: 0; }
+      100% { max-width: 0; }
+    }
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+
+    /* Social Media Icons */
+    .social-icons {
+      margin-top: 20px;
+    }
+    .social-icons a {
+      color: #ffffff;
+      margin: 0 10px;
+      font-size: 1.5rem;
+      transition: color 0.3s;
+    }
+    .social-icons a:hover {
+      color: #ffcc00;
+    }
+
+    .section-heading {
+      padding: 50px 0 20px;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    .skills-container, .projects-container {
+      background-color: #1f1f1f;
+    }
+
+    /* Animasi pada Scroll */
+    [data-aos] {
+      opacity: 0;
+      transition-property: opacity, transform;
+      transition-duration: 1s;
+    }
+    [data-aos].aos-animate {
+      opacity: 1;
+      transform: translate(0);
+    }
+
+    /* Mengatur lebar awal progress bar ke 0 */
+    .progress-bar-fill {
+      width: 0;
+      transition: width 2s ease;
+    }
+
+    /* Animasi dan gaya project */
+    .card-img-top {
+      height: 200px;
+      object-fit: cover;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .card:hover .card-img-top {
+      transform: scale(1.05);
+      opacity: 0.9;
+    }
+
+    /* Modal Image Styling */
+    #modalImage {
+      max-height: 90vh;
+      width: 100%;
+      object-fit: contain;
+    }
+
+    /* Responsive Styling */
+    @media (max-width: 768px) {
+      .jumbotron {
+        height: auto;
+        padding: 2rem 1rem;
+      }
+
+      .profile-pic {
+        width: 100px;
+        height: 100px;
+      }
+
+      .section-heading {
+        padding: 30px 0 10px;
+        font-size: 1.5rem;
+      }
+
+      .navbar .nav-link {
+        font-size: 0.9rem;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .jumbotron {
+        height: auto;
+        padding: 1rem 0.5rem;
+      }
+
+      .navbar .nav-link {
+        font-size: 0.8rem;
+      }
+    }
+
+    /* Footer Styling */
+    .footer {
+      padding: 40px 20px; /* Increased padding for larger footer */
+    }
+
+    @media (max-width: 768px) {
+      .footer {
+        padding: 30px 15px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .footer {
+        padding: 40px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">Rivalda Fatah Rachman Hernawan</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        <!-- Button Play and Stop Music -->
+        <li class="nav-item">
+          <button id="playMusic" class="btn btn-outline-light btn-sm ms-3">Play Music</button>
+        </li>
+        <li class="nav-item">
+          <button id="stopMusic" class="btn btn-outline-light btn-sm ms-2">Stop Music</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Audio Element for Background Music -->
+<audio id="backgroundMusic" src="music/lofi.mp3" loop></audio> <!-- Replace with the actual path to your music file -->
+
+<!-- Jumbotron with GIF Background -->
+<div class="jumbotron">
+  <div class="container">
+    <img src="image/Pasfoto.jpg" alt="Profile Picture" class="profile-pic mb-3">
+    <h1 class="display-4">Rivalda Fatah Rachman Hernawan</h1>
+    <p class="lead typing">Professional in Software Development, Web Design & Quality Assurance</p>
+    <!-- Social Media Icons -->
+    <div class="social-icons">
+      <a href="https://www.instagram.com/rivalda_fatah/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/rivalda-fatah/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://www.facebook.com/rivalda.fatahrh/" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://github.com/rivaldafatah" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://medium.com/@rivalda.rafalrachman2016" target="_blank"><i class="fab fa-medium"></i></a>
+      <a href="https://www.tiktok.com/@dalextwentyone" target="_blank"><i class="fab fa-tiktok"></i></a>
+    </div>
+  </div>
+    <!-- Real-time Clock Display -->
+    <div id="clock" class="mt-4 fs-5 text-light"></div> <!-- Gaya tambahan untuk waktu -->
+  </div>
+</div>
+
+<!-- About Section -->
+<section id="about" class="py-5" data-aos="fade-up">
+  <div class="container">
+    <h2 class="section-heading text-center">About Me</h2>
+    <div class="row mt-4">
+      <!-- Bagian Kiri -->
+      <div class="col-md-6" style="text-align: justify;">
+        <p>Hello, I'm Rivalda Fatah Rachman Hernawan, a passionate professional in the world of web development, web design, and quality assurance. I graduated from Universitas Komputer Indonesia with a degree in Information Systems, and I've been honing my skills to create efficient, user-friendly web applications that meet both technical and user expectations.
+        With experience as a Quality Assurance intern at PT Walden Global Services and Detikcom, along with hands-on roles as a Quality Assurance and Web Developer, I have developed a strong understanding of the technology stack, testing processes, and user-focused design principles. My approach combines technical skills with a sharp eye for detail to ensure that every product is reliable, responsive, and visually compelling.</p>
+      </div>
+      
+      <!-- Bagian Kanan -->
+      <div class="col-md-6" style="text-align: justify;">
+        <p>I'm skilled in both front-end and back-end development, having completed comprehensive training at Dicoding Indonesia. This has equipped me with the tools and expertise to build robust web applications and handle end-to-end development processes. My focus is on leveraging innovative technologies to drive growth and provide seamless experiences for users.
+        I am excited to continue growing as a System Analyst, combining my background in development and quality assurance to bridge the gap between technology and business needs. With strong communication skills and a knack for problem-solving, I aim to contribute to impactful projects and deliver solutions that enhance user satisfaction and product performance. Let’s build something amazing together!</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Skills Section with Progress Bars -->
+<section id="skills" class="py-5 skills-container" data-aos="fade-right">
+  <div class="container">
+    <h2 class="section-heading text-center">Skills</h2>
+    <div class="row">
+      <div class="col-md-6 mt-3">
+        <h5>JavaScript</h5>
+        <div class="progress">
+          <div class="progress-bar progress-bar-fill bg-success" role="progressbar" data-width="75%" aria-valuemin="0" aria-valuemax="100">75%</div>
+        </div>
+      </div>
+      <div class="col-md-6 mt-3">
+        <h5>PHP</h5>
+        <div class="progress">
+          <div class="progress-bar progress-bar-fill bg-success" role="progressbar" data-width="80%"  aria-valuemin="0" aria-valuemax="100">80%</div>
+        </div>
+      </div>
+      <div class="col-md-6 mt-3">
+        <h5>UI/UX Design</h5>
+        <div class="progress">
+          <div class="progress-bar progress-bar-fill bg-warning" role="progressbar" data-width="75%"  aria-valuemin="0" aria-valuemax="100">75%</div>
+        </div>
+      </div>
+      <div class="col-md-6 mt-3">
+        <h5>System Analysis</h5>
+        <div class="progress">
+          <div class="progress-bar progress-bar-fill bg-warning" role="progressbar" data-width="85%"  aria-valuemin="0" aria-valuemax="100">85%</div>
+        </div>
+      </div>
+      <div class="col-md-6 mt-3">
+        <h5>Web Testing</h5>
+        <div class="progress">
+          <div class="progress-bar progress-bar-fill bg-secondary" role="progressbar" data-width="90%"  aria-valuemin="0" aria-valuemax="100">90%</div>
+        </div>
+      </div>
+      <div class="col-md-6 mt-3">
+        <h5>HTML</h5>
+        <div class="progress">
+          <div class="progress-bar progress-bar-fill bg-secondary" role="progressbar" data-width="90%"  aria-valuemin="0" aria-valuemax="100">90%</div>
+        </div>
+      </div>
+      <div class="col-md-6 mt-3">
+        <h5>Mobile Testing</h5>
+        <div class="progress">
+          <div class="progress-bar progress-bar-fill bg-primary" role="progressbar" data-width="90%"  aria-valuemin="0" aria-valuemax="100">90%</div>
+        </div>
+      </div>
+      <div class="col-md-6 mt-3">
+        <h5>SDLC</h5>
+        <div class="progress">
+          <div class="progress-bar progress-bar-fill bg-primary" role="progressbar" data-width="80%"  aria-valuemin="0" aria-valuemax="100">80%</div>
+        </div>
+      </div>
+      <div class="col-md-6 mt-3">
+        <h5>Analysis</h5>
+        <div class="progress">
+          <div class="progress-bar progress-bar-fill bg-danger" role="progressbar" data-width="85%"  aria-valuemin="0" aria-valuemax="100">85%</div>
+        </div>
+      </div>
+      <div class="col-md-6 mt-3">
+        <h5>Teamwork</h5>
+        <div class="progress">
+          <div class="progress-bar progress-bar-fill bg-danger" role="progressbar" data-width="75%"  aria-valuemin="0" aria-valuemax="100">75%</div>
+        </div>
+      </div>
+      <div class="col-md-6 mt-3">
+        <h5>CSS</h5>
+        <div class="progress">
+          <div class="progress-bar progress-bar-fill bg-info" role="progressbar" data-width="80%"  aria-valuemin="0" aria-valuemax="100">80%</div>
+        </div>
+      </div>
+      <div class="col-md-6 mt-3">
+        <h5>Microsoft Office</h5>
+        <div class="progress">
+          <div class="progress-bar progress-bar-fill bg-info" role="progressbar" data-width="85%"  aria-valuemin="0" aria-valuemax="100">85%</div>
+        </div>
+      </div>
+      <div class="col-md-6 mt-3">
+        <h5>Google Spreadsheets</h5>
+        <div class="progress">
+          <div class="progress-bar progress-bar-fill bg-success" role="progressbar" data-width="90%"  aria-valuemin="0" aria-valuemax="100">90%</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Experience Section -->
+<section id="experience" class="py-5" data-aos="fade-left">
+  <div class="container text-center">
+    <h2 class="section-heading">Experience</h2>
+    <div class="row gy-4">
+      <div class="col-md-6">
+        <h5>Quality Assurance</h5>
+        <p><em>Detikcom (Internship) | Aug 2023 - Dec 2023</em></p>
+        <p>I work as a Quality Assurance specializing in manual testing of web and Android/iOS mobile applications based on predefined test cases outlined in User Acceptance Testing (UAT) documents. Additionally, I contribute by crafting scenario test cases within UAT documentation prior to conducting the testing process</p>
+      </div>
+      <div class="col-md-6">
+        <h5>System Analyst</h5>
+        <p><em>Universitas Komputer Indonesia (Contract) | Apr 2023 - Sep 2023</em></p>
+        <p>I joined an application development project and worked as a system analyst to create the development flow of the application.</p>
+      </div>
+      <div class="col-md-6">
+        <h5>Front End - Back End Developer</h5>
+        <p><em>Dicoding Indonesia (Internship) | Feb 2023 - Jul 2023</em></p>
+        <p>I joined one of the kampus merdeka programs, MSIB Batch IV. I took an independent study majoring in Front-End Web and Back-End Developer.</p>
+      </div>
+      <div class="col-md-6">
+        <h5>Liaison Officer</h5>
+        <p><em>Universitas Komputer Indonesia (Seasonal) | Dec 2022 - Dec 2022</em></p>
+        <p>Conducted extensive data analysis and visualized insights for business development. Utilized Python and SQL for data cleaning and Power BI for visualization, which supported strategic decision-making for clients.</p>
+      </div>
+      <div class="col-md-6">
+        <h5>Software Quality Assurance</h5>
+        <p><em>PT Walden Global Services (Internship) | Nov 2018 - Jan 2019</em></p>
+        <p>I work as a Quality Assurance to perform manual and automated web testing using automated testing tools based on test case documentation in Requirement Traceability Matrix.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Projects Section with Carousel Slider -->
+<section id="projects" class="py-5 projects-container" data-aos="fade-up">
+  <div class="container text-center">
+    <h2 class="section-heading">Projects</h2>
+    <div id="projectsCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        
+        <!-- Slide 1 (Projects 1-3) -->
+        <div class="carousel-item active">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card bg-dark text-white shadow">
+                <img src="image/project1.jpg" class="card-img-top project-img" alt="Project 1" data-bs-toggle="modal" data-bs-target="#imageModal">
+                <div class="card-body">
+                  <h5 class="card-title">Printing Service Ordering Application</h5>
+                  <p class="card-text">Integrated print platform for ordering, managing, and tracking in real-time.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card bg-dark text-white shadow">
+                <img src="image/project2.jpg" class="card-img-top project-img" alt="Project 2" data-bs-toggle="modal" data-bs-target="#imageModal">
+                <div class="card-body">
+                  <h5 class="card-title">DocsMorpher Apps</h5>
+                  <p class="card-text">Convert files to PDF seamlessly, ensuring quick, secure, and high-quality transformations.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card bg-dark text-white shadow">
+                <img src="image/project3.jpg" class="card-img-top project-img" alt="Project 3" data-bs-toggle="modal" data-bs-target="#imageModal">
+                <div class="card-body">
+                  <h5 class="card-title">UnibookStore</h5>
+                  <p class="card-text">Manage books, publishers, stock, and procurement efficiently for seamless bookstore operations.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 (Projects 4-6) -->
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card bg-dark text-white shadow">
+                <img src="image/project4.jpg" class="card-img-top project-img" alt="Project 4" data-bs-toggle="modal" data-bs-target="#imageModal">
+                <div class="card-body">
+                  <h5 class="card-title">Restaurant Apps Valda Resto</h5>
+                  <p class="card-text">Provides comprehensive information on restaurants across cities in Indonesia.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card bg-dark text-white shadow">
+                <img src="image/project5.jpg" class="card-img-top project-img" alt="Project 5" data-bs-toggle="modal" data-bs-target="#imageModal">
+                <div class="card-body">
+                  <h5 class="card-title">Bookshelf Apps</h5>
+                  <p class="card-text">Track reading progress, mark completed books, and manage unfinished reads easily and efficiently.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card bg-dark text-white shadow">
+                <img src="image/project6.jpg" class="card-img-top project-img" alt="Project 6" data-bs-toggle="modal" data-bs-target="#imageModal">
+                <div class="card-body">
+                  <h5 class="card-title">Portfolio Website</h5>
+                  <p class="card-text"> Showcase career achievements, skills, and experiences with a professional, tailored online presence.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+
+      <!-- Controls for manual navigation -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#projectsCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#projectsCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- Modal for Zooming Image with Larger Size -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered"> <!-- Perubahan menjadi modal-xl untuk ukuran ekstra besar -->
+    <div class="modal-content bg-dark text-white">
+      <div class="modal-body position-relative">
+        <!-- Close Button (X) -->
+        <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>
+        <!-- Zoomed Image -->
+        <img src="" id="modalImage" class="img-fluid rounded" alt="Zoomed Project Image">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Contact Section and Footer -->
+<section id="contact" class="py-5" data-aos="fade-in">
+  <div class="container text-center">
+    <h2 class="section-heading">Contact Me</h2>
+    <p>If you would like to discuss a project or collaboration, feel free to reach out!</p>
+    <a href="mailto:rivaldarafalrachman2016@gmail.com" class="btn btn-primary">Email Me</a>
+  </div>
+</section>
+
+<footer class="footer text-center text-white">
+  <p>&copy; 2023 Rivalda Fatah Rachman Hernawan. All Rights Reserved.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: false, // Animasi berfungsi setiap kali bagian terlihat
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    // Select all progress bars
+    const progressBars = document.querySelectorAll('.progress-bar-fill');
+
+    // Function to check if an element is in the viewport
+    function isInViewport(element) {
+      const rect = element.getBoundingClientRect();
+      return (
+        rect.top < window.innerHeight && rect.bottom >= 0
+      );
+    }
+
+    // Function to animate progress bars
+    function animateProgressBars() {
+      progressBars.forEach(progressBar => {
+        // Skip if the animation has already been applied
+        if (progressBar.dataset.animated === "true") return;
+
+        // Check if the element is in the viewport
+        if (isInViewport(progressBar)) {
+          // Mark as animated to prevent multiple triggers
+          progressBar.dataset.animated = "true";
+
+          // Get the target width from data-width attribute
+          const targetWidth = progressBar.getAttribute('data-width');
+          progressBar.style.width = '0'; // Start from 0 width
+          progressBar.style.transition = 'width 2s ease-in-out'; // Smooth transition
+          
+          // Use setTimeout to ensure the animation starts after setting width to 0
+          setTimeout(() => {
+            progressBar.style.width = targetWidth;
+          }, 100);
+        }
+      });
+    }
+
+    // Event listener for scrolling to trigger animations
+    function onScroll() {
+      animateProgressBars();
+    }
+
+    // Attach scroll event listener
+    window.addEventListener('scroll', onScroll);
+
+    // Trigger animations on page load
+    animateProgressBars();
+  });
+
+  document.addEventListener("DOMContentLoaded", function() {
+    // Pilih semua gambar proyek
+    const projectImages = document.querySelectorAll(".project-img");
+    const modalImage = document.getElementById("modalImage");
+
+    // Event listener untuk gambar proyek
+    projectImages.forEach(img => {
+      img.addEventListener("click", function() {
+        // Setel src gambar modal menjadi src gambar yang diklik
+        modalImage.src = img.src;
+      });
+    });
+  });
+
+  // JavaScript for Real-Time Clock
+  function updateClock() {
+    const clockElement = document.getElementById("clock");
+    const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+    const now = new Date();
+    const day = days[now.getDay()];
+    const date = now.getDate();
+    const month = months[now.getMonth()];
+    const year = now.getFullYear();
+    const hours = now.getHours().toString().padStart(2, '0');
+    const minutes = now.getMinutes().toString().padStart(2, '0');
+    const seconds = now.getSeconds().toString().padStart(2, '0');
+
+    clockElement.innerHTML = `${day}, ${date} ${month} ${year} | ${hours}:${minutes}:${seconds}`;
+  }
+
+  // Update clock every second
+  setInterval(updateClock, 1000);
+  // Initial call to display time immediately on page load
+  updateClock();
+
+  // JavaScript to Control Music Playback
+  const backgroundMusic = document.getElementById("backgroundMusic");
+  const playButton = document.getElementById("playMusic");
+  const stopButton = document.getElementById("stopMusic");
+
+  // Auto play music on page load
+  window.addEventListener("load", () => {
+    backgroundMusic.play();
+  });
+
+  // Play Music Button
+  playButton.addEventListener("click", () => {
+    backgroundMusic.play();
+  });
+
+  // Stop Music Button
+  stopButton.addEventListener("click", () => {
+    backgroundMusic.pause();
+    backgroundMusic.currentTime = 0; // Reset to the start
+  });
+</script>
+</body>
+</html>
