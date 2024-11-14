@@ -518,38 +518,158 @@
   </div>
 </div>
 
-<!-- Certificates Section -->
+<!-- Certificates Section with Tabs -->
 <section id="certificates" class="py-5 certificates-container" data-aos="fade-up">
   <div class="container text-center">
     <h2 class="section-heading">Certificates</h2>
-    <div class="row gy-4 mt-4">
-      <div class="col-md-4">
-        <h5>Front-End Web Development</h5>
-        <p><em>Dicoding Academy, 2021</em></p>
+    <!-- Tab Navigation -->
+    <ul class="nav nav-tabs justify-content-center mt-4" id="certificateTabs" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="tab-1" data-bs-toggle="tab" data-bs-target="#certGroup1" type="button" role="tab" aria-controls="certGroup1" aria-selected="true">1</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="tab-2" data-bs-toggle="tab" data-bs-target="#certGroup2" type="button" role="tab" aria-controls="certGroup2" aria-selected="false">2</button>
+      </li>
+    </ul>
+
+    <!-- Tab Content -->
+    <div class="tab-content mt-4" id="certificateTabContent">
+      <!-- First Tab Content -->
+      <div class="tab-pane fade show active" id="certGroup1" role="tabpanel" aria-labelledby="tab-1">
+        <div class="row gy-4">
+          <div class="col-md-4">
+            <div class="card bg-dark text-white shadow">
+              <img src="image/cert1.jpg" class="card-img-top cert-img" alt="Certificate 1" data-bs-toggle="modal" data-bs-target="#certificateModal">
+              <div class="card-body">
+                <h5 class="card-title">Belajar Dasar - Dasar Devops</h5>
+                <p class="card-text"><em>Dicoding Academy, 9 November 2023</em></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card bg-dark text-white shadow">
+              <img src="image/cert2.jpg" class="card-img-top cert-img" alt="Certificate 2" data-bs-toggle="modal" data-bs-target="#certificateModal">
+              <div class="card-body">
+                <h5 class="card-title">Menjadi Front-End Web Developer Expert</h5>
+                <p class="card-text"><em>Dicoding Academy, 12 Juni 2023</em></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card bg-dark text-white shadow">
+              <img src="image/cert3.jpg" class="card-img-top cert-img" alt="Certificate 3" data-bs-toggle="modal" data-bs-target="#certificateModal">
+              <div class="card-body">
+                <h5 class="card-title">Belajar Membuat Aplikasi Untuk Back-End Pemula</h5>
+                <p class="card-text"><em>Dicoding Academy, 22 Mei 2023</em></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card bg-dark text-white shadow">
+              <img src="image/cert4.jpg" class="card-img-top cert-img" alt="Certificate 4" data-bs-toggle="modal" data-bs-target="#certificateModal">
+              <div class="card-body">
+                <h5 class="card-title">Belajar Dasar Pemrograman Javascript</h5>
+                <p class="card-text"><em>Dicoding Academy, 10 Maret 2023</em></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card bg-dark text-white shadow">
+              <img src="image/cert5.jpg" class="card-img-top cert-img" alt="Certificate 5" data-bs-toggle="modal" data-bs-target="#certificateModal">
+              <div class="card-body">
+                <h5 class="card-title">Belajar Fundamental Front-End Web Development</h5>
+                <p class="card-text"><em>Dicoding Academy, 10 April 2023</em></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card bg-dark text-white shadow">
+              <img src="image/cert6.jpg" class="card-img-top cert-img" alt="Certificate 6" data-bs-toggle="modal" data-bs-target="#certificateModal">
+              <div class="card-body">
+                <h5 class="card-title">Meniti Karier Sebagai Software Development</h5>
+                <p class="card-text"><em>Dicodding Academy, 18 April 2023</em></p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="col-md-4">
-        <h5>Back-End Developer Certification</h5>
-        <p><em>Dicoding Academy, 2022</em></p>
-      </div>
-      <div class="col-md-4">
-        <h5>UI/UX Design Essentials</h5>
-        <p><em>Udemy, 2023</em></p>
-      </div>
-      <div class="col-md-4">
-        <h5>Data Analysis with Python</h5>
-        <p><em>Coursera, 2022</em></p>
-      </div>
-      <div class="col-md-4">
-        <h5>Project Management Professional</h5>
-        <p><em>PMI, 2023</em></p>
-      </div>
-      <div class="col-md-4">
-        <h5>Quality Assurance & Software Testing</h5>
-        <p><em>LinkedIn Learning, 2023</em></p>
+
+      <!-- Second Tab Content -->
+      <div class="tab-pane fade" id="certGroup2" role="tabpanel" aria-labelledby="tab-2">
+        <div class="row gy-4">
+          <div class="col-md-4">
+            <div class="card bg-dark text-white shadow">
+              <img src="image/cert7.jpg" class="card-img-top cert-img" alt="Certificate 7" data-bs-toggle="modal" data-bs-target="#certificateModal">
+              <div class="card-body">
+                <h5 class="card-title">Belajar Dasar Pemrograman Web</h5>
+                <p class="card-text"><em>Dicoding Academy, 3 Maret 2023</em></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card bg-dark text-white shadow">
+              <img src="image/cert8.jpg" class="card-img-top cert-img" alt="Certificate 8" data-bs-toggle="modal" data-bs-target="#certificateModal">
+              <div class="card-body">
+                <h5 class="card-title">Belajar Membuat Front-End Web Untuk Pemula</h5>
+                <p class="card-text"><em>Dicoding Academy, 18 Maret 2023</em></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card bg-dark text-white shadow">
+              <img src="image/cert9.jpg" class="card-img-top cert-img" alt="Certificate 9" data-bs-toggle="modal" data-bs-target="#certificateModal">
+              <div class="card-body">
+                <h5 class="card-title">Programming Logic 101</h5>
+                <p class="card-text"><em>Dicoding Academy, 24 Februari 2023</em></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card bg-dark text-white shadow">
+              <img src="image/cert10.jpg" class="card-img-top cert-img" alt="Certificate 10" data-bs-toggle="modal" data-bs-target="#certificateModal">
+              <div class="card-body">
+                <h5 class="card-title">Belajar Dasar Git Dengan Github</h5>
+                <p class="card-text"><em>Dicoding Academy, 24 Februari 2023</em></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card bg-dark text-white shadow">
+              <img src="image/cert11.jpg" class="card-img-top cert-img" alt="Certificate 11" data-bs-toggle="modal" data-bs-target="#certificateModal">
+              <div class="card-body">
+                <h5 class="card-title">Memulai Dasar Pemrograman Untuk Menjadi Pengembang Software</h5>
+                <p class="card-text"><em>Dicoding Academy, 22 Februari 2023</em></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card bg-dark text-white shadow">
+              <img src="image/cert12.jpg" class="card-img-top cert-img" alt="Certificate 12" data-bs-toggle="modal" data-bs-target="#certificateModal">
+              <div class="card-body">
+                <h5 class="card-title">Intro To Data Analytics</h5>
+                <p class="card-text"><em>Revou, 22 Mei 2022</em></p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
+
+<!-- Modal for Zooming Certificate Images -->
+<div class="modal fade" id="certificateModal" tabindex="-1" aria-labelledby="certificateModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content bg-dark text-white">
+      <div class="modal-body position-relative">
+        <!-- Close Button -->
+        <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>
+        <!-- Zoomed Image -->
+        <img src="" id="modalCertImage" class="img-fluid rounded" alt="Zoomed Certificate Image">
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- Contact Section and Footer -->
 <section id="contact" class="py-5" data-aos="fade-in">
@@ -676,6 +796,18 @@
   stopButton.addEventListener("click", () => {
     backgroundMusic.pause();
     backgroundMusic.currentTime = 0; // Reset to the start
+  });
+
+  // JavaScript for displaying the zoomed-in certificate image in the modal
+  document.addEventListener("DOMContentLoaded", function() {
+    const certImages = document.querySelectorAll(".cert-img");
+    const modalCertImage = document.getElementById("modalCertImage");
+
+    certImages.forEach(img => {
+      img.addEventListener("click", function() {
+        modalCertImage.src = img.src;
+      });
+    });
   });
 </script>
 </body>
