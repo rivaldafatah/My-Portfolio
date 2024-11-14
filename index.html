@@ -25,6 +25,16 @@
       color: #ffffff !important;
     }
 
+    /* Navbar Brand dan Hamburger Button Responsiveness */
+    .navbar-brand {
+      font-size: 1.2rem; /* Ukuran default untuk layar besar */
+    }
+
+    .navbar-toggler {
+      padding: 0.25rem 0.5rem; /* Mengurangi padding agar lebih kecil */
+      font-size: 1.2rem; /* Mengurangi ukuran font ikon hamburger */
+    }
+
     /* Navbar responsiveness fix */
     .navbar .nav-item {
       margin-right: 0; /* Reset margin for items if any issues */
@@ -168,10 +178,16 @@
         padding: 4rem 1rem;
       }
 
+      .navbar-brand {
+      font-size: 1.3rem; /* Perkecil ukuran teks navbar brand */
+      }
+
       .navbar-toggler {
         position: absolute; /* Position the hamburger button on the right */
         right: 1rem;
         top: 1rem;
+        padding: 0.2rem 0.4rem; /* Perkecil padding tombol hamburger */
+        font-size: 1rem; /* Perkecil ukuran ikon hamburger */
       }
 
       .section-heading {
