@@ -9,249 +9,192 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
   <style>
     /* Dark Mode Styling */
-body {
-  background-color: #121212;
-  color: #ffffff;
-  overflow-x: hidden; /* Prevents horizontal scrolling */
-  margin: 0;
-  padding: 0;
-}
-.navbar, .footer, .jumbotron {
-  background-color: #1f1f1f;
-}
-.navbar-light .navbar-brand, .navbar-light .navbar-nav .nav-link {
-  color: #ffffff !important;
-}
+    body, html {
+      background-color: #121212;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    color: #ffffff;
+    }
+    .navbar, .footer, .jumbotron {
+      background-color: #1f1f1f;
+    }
+    .navbar-light .navbar-brand, .navbar-light .navbar-nav .nav-link {
+      color: #ffffff !important;
+    }
+    /* Navbar responsiveness fix */
+    .navbar .nav-item {
+      margin-right: 0; /* Reset margin for items if any issues */
+    }
 
-/* Jumbotron with GIF Background */
-.jumbotron {
-  padding: 3rem 1rem;
-  text-align: center;
-  color: #ffffff;
-  position: relative;
-  overflow: hidden;
-  background-image: url('video/computer.gif') !important;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100vh;
-}
-.profile-pic {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-top: 40px;
-  border: 3px solid #ffffff;
-  margin-left: auto;
-  margin-right: auto;
-  display: block; /* Center the profile picture */
-}
+    .navbar .btn {
+      white-space: nowrap; /* Prevent button text from wrapping */
+    }
 
-/* Typing Animation */
-.typing {
-  display: inline-block;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 3px solid;
-  max-width: 100%; /* Adjusts width to prevent overflow */
-  animation: typing 4s steps(30, end), blink 0.75s step-end infinite, typing-repeat 10s infinite;
-  word-break: break-word; /* Allows text to break lines if necessary */
-  text-align: center; /* Centers the text */
-}
-@keyframes typing {
-  from { max-width: 0; }
-  to { max-width: 100%; }
-}
-@keyframes typing-repeat {
-  0% { max-width: 0; }
-  70% { max-width: 100%; }
-  80% { max-width: 100%; }
-  90% { max-width: 0; }
-  100% { max-width: 0; }
-}
-@keyframes blink {
-  50% { border-color: transparent; }
-}
+    /* Fix for overflow of navbar buttons */
+    .navbar-nav {
+      flex-wrap: wrap; /* Allow wrapping in mobile view */
+      justify-content: center; /* Center items if needed */
+    }
 
-/* Social Media Icons */
-.social-icons {
-  margin-top: 20px;
-}
-.social-icons a {
-  color: #ffffff;
-  margin: 0 10px;
-  font-size: 1.5rem;
-  transition: color 0.3s;
-}
-.social-icons a:hover {
-  color: #ffcc00;
-}
+    /* Jumbotron with GIF Background */
+    .jumbotron {
+      padding: 3rem 1rem;
+      text-align: center;
+      color: #ffffff;
+      position: relative;
+      overflow: hidden;
+      background-image: url('video/computer.gif') !important;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: auto; /* Remove fixed height */
+      min-height: 100vh; /* Use min-height for better responsiveness */
+      width: 100%; /* Ensure full width without causing overflow */
+    }
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-top: 40px;
+      border: 3px solid #ffffff;
+    }
 
-.section-heading {
-  padding: 50px 0 20px;
-  text-transform: uppercase;
-  font-weight: bold;
-}
+    /* Typing Animation */
+    .typing {
+      display: inline-block;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 3px solid;
+      max-width: 100%;
+      animation: typing 4s steps(30, end), blink 0.75s step-end infinite, typing-repeat 10s infinite;
+    }
+    @keyframes typing {
+      from { max-width: 0; }
+      to { max-width: 100%; }
+    }
+    @keyframes typing-repeat {
+      0% { max-width: 0; }
+      70% { max-width: 100%; }
+      80% { max-width: 100%; }
+      90% { max-width: 0; }
+      100% { max-width: 0; }
+    }
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
 
-.skills-container, .education-container, .certificates-container {
-  background-color: #1f1f1f;
-}
+    /* Social Media Icons */
+    .social-icons {
+      margin-top: 20px;
+    }
+    .social-icons a {
+      color: #ffffff;
+      margin: 0 10px;
+      font-size: 1.5rem;
+      transition: color 0.3s;
+    }
+    .social-icons a:hover {
+      color: #ffcc00;
+    }
 
-/* Animasi pada Scroll */
-[data-aos] {
-  opacity: 0;
-  transition-property: opacity, transform;
-  transition-duration: 1s;
-}
-[data-aos].aos-animate {
-  opacity: 1;
-  transform: translate(0);
-}
+    .section-heading {
+      padding: 50px 0 20px;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
 
-/* Mengatur lebar awal progress bar ke 0 */
-.progress-bar-fill {
-  width: 0;
-  transition: width 2s ease;
-}
+    .skills-container, .education-container, .certificates-container {
+      background-color: #1f1f1f;
+    }
 
-/* Animasi dan gaya project */
-.card-img-top {
-  height: 200px;
-  object-fit: cover;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-.card:hover .card-img-top {
-  transform: scale(1.05);
-  opacity: 0.9;
-}
+    /* Animasi pada Scroll */
+    [data-aos] {
+      opacity: 0;
+      transition-property: opacity, transform;
+      transition-duration: 1s;
+    }
+    [data-aos].aos-animate {
+      opacity: 1;
+      transform: translate(0);
+    }
 
-/* Modal Image Styling */
-#modalImage {
-  max-height: 90vh;
-  width: 100%;
-  object-fit: contain;
-}
+    /* Mengatur lebar awal progress bar ke 0 */
+    .progress-bar-fill {
+      width: 0;
+      transition: width 2s ease;
+    }
 
-/* Responsive Styling */
-@media (max-width: 768px) {
-  .jumbotron {
-    height: auto;
-    padding: 2rem 1rem;
-  }
+    /* Animasi dan gaya project */
+    .card-img-top {
+      height: 200px;
+      object-fit: cover;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
 
-  .profile-pic {
-    width: 100px;
-    height: 100px;
-  }
+    .card:hover .card-img-top {
+      transform: scale(1.05);
+      opacity: 0.9;
+    }
 
-  .section-heading {
-    padding: 30px 0 10px;
-    font-size: 1.5rem;
-  }
+    /* Modal Image Styling */
+    #modalImage {
+      max-height: 90vh;
+      width: 100%;
+      object-fit: contain;
+    }
 
-  .navbar .nav-link {
-    font-size: 0.9rem;
-  }
+    /* Responsive Styling */
+    @media (max-width: 768px) {
+      .jumbotron {
+        height: auto;
+        text-align: center;
+        padding: 2rem 1rem;
+      }
 
-  .typing {
-    font-size: 1.2rem; /* Adjusts text size for smaller screens */
-    max-width: 90%; /* Ensures content fits within the viewport */
-    white-space: normal; /* Allows text wrapping */
-    margin: 0 auto; /* Centers text block */
-  }
+      .profile-pic {
+        width: 100px;
+        height: 100px;
+      }
 
-  .navbar-collapse {
-    justify-content: center; /* Centers the collapsed items */
-  }
-}
+      .section-heading {
+        padding: 30px 0 10px;
+        font-size: 1.5rem;
+      }
 
-@media (max-width: 576px) {
-  .jumbotron {
-    height: auto;
-    padding: 1rem 0.5rem;
-  }
+      .navbar .nav-link, .navbar .btn {
+        font-size: 0.9rem;
+      }
+    }
 
-  .navbar .nav-link {
-    font-size: 0.8rem;
-  }
+    @media (max-width: 576px) {
+      .jumbotron {
+        height: auto;
+        padding: 1rem 0.5rem;
+      }
 
-  .navbar-toggler {
-    margin-right: auto; /* Ensures hamburger button aligns properly */
-  }
-  .typing {
-    font-size: 1rem; /* Further adjusts text size for very small screens */
-    white-space: normal; /* Ensures text wraps on smaller screens */
-    max-width: 100%; /* Ensures full width usage */
-  }
-}
+      .navbar .nav-link, .navbar .btn {
+        font-size: 0.8rem;
+      }
+    }
 
-/* Prevent Horizontal Scrolling */
-.container {
-  max-width: 100%;
-  overflow-x: hidden;
-}
+    /* Footer Styling */
+    .footer {
+      padding: 40px 20px; /* Increased padding for larger footer */
+    }
 
-.row {
-  flex-wrap: wrap;
-  margin-right: 0;
-  margin-left: 0;
-}
+    @media (max-width: 768px) {
+      .footer {
+        padding: 30px 15px;
+      }
+    }
 
-.col-md-6, .col-md-4 {
-  padding-right: 15px;
-  padding-left: 15px;
-}
-
-.card {
-  max-width: 100%;
-  box-sizing: border-box;
-}
-
-.navbar-nav {
-  flex-wrap: wrap;
-}
-
-.navbar-collapse {
-  overflow-x: hidden; /* Prevent horizontal overflow in the navbar */
-}
-
-/* Prevent Image Overflow */
-img {
-  max-width: 100%;
-  height: auto;
-  display: block; /* Prevents inline spacing issues */
-}
-
-/* Footer Styling */
-.footer {
-  padding: 40px 20px; /* Increased padding for larger footer */
-}
-@media (max-width: 768px) {
-  .footer {
-    padding: 30px 15px;
-  }
-}
-@media (max-width: 576px) {
-  .footer {
-    padding: 40px 20px;
-  }
-}
-
-/* Buttons */
-button {
-  max-width: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-@media (max-width: 576px) {
-  section {
-    padding: 20px 10px;
-  }
-}
-
+    @media (max-width: 576px) {
+      .footer {
+        padding: 40px 20px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -292,7 +235,7 @@ button {
   <div class="container">
     <img src="image/Pasfoto.jpg" alt="Profile Picture" class="profile-pic mb-3">
     <h1 class="display-4">Rivalda Fatah Rachman Hernawan</h1>
-    <p class="lead typing">Professional in Software Development, Web Design & Quality Assurance</p>
+    <p class="lead typing">Software Development & Quality Assurance</p>
     <!-- Social Media Icons -->
     <div class="social-icons">
       <a href="https://www.instagram.com/rivalda_fatah/" target="_blank"><i class="fab fa-instagram"></i></a>
