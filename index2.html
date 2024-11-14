@@ -165,12 +165,6 @@
       object-fit: contain;
     }
 
-      /* Jarak antara elemen musik selector dan tombol play */
-    #musicSelector {
-      margin-right: 10px; /* Tambah jarak */
-    }
-
-
     /* Responsive Styling */
     @media (max-width: 768px) {
       /* Ensure profile picture is below the navbar */
@@ -253,17 +247,9 @@
         <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
         <li class="nav-item"><a class="nav-link" href="#certificates">Certificates</a></li>
         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-        
-        <!-- Pemilih Musik dan Kontrol Play/Stop -->
+        <!-- Button Play and Stop Music -->
         <li class="nav-item">
-          <select id="musicSelector" class="form-select form-select-sm ms-2">
-            <option value="music/lofi.mp3">Lofi</option>
-            <option value="music/CauseYouHaveTo.mp3">CYHT(LANY)</option>
-            <option value="music/XXL.mp3">XXL(LANY)</option>
-          </select>
-        </li>
-        <li class="nav-item">
-          <button id="playMusic" class="btn btn-outline-light btn-sm ms-2">Play Music</button>
+          <button id="playMusic" class="btn btn-outline-light btn-sm ms-3">Play Music</button>
         </li>
         <li class="nav-item">
           <button id="stopMusic" class="btn btn-outline-light btn-sm ms-2">Stop Music</button>
@@ -273,9 +259,8 @@
   </div>
 </nav>
 
-<!-- Audio Element -->
-<audio id="backgroundMusic" loop></audio>
-
+<!-- Audio Element for Background Music -->
+<audio id="backgroundMusic" src="music/lofi.mp3" loop></audio> <!-- Replace with the actual path to your music file -->
 
 <!-- Jumbotron with GIF Background -->
 <div class="jumbotron">
@@ -843,52 +828,26 @@
   // Initial call to display time immediately on page load
   updateClock();
 
-  document.addEventListener("DOMContentLoaded", function () {
-  // Inisialisasi elemen musik
+  // JavaScript to Control Music Playback
+  const backgroundMusic = document.getElementById("backgroundMusic");
   const playButton = document.getElementById("playMusic");
   const stopButton = document.getElementById("stopMusic");
-  const musicSelector = document.getElementById("musicSelector");
-  const backgroundMusic = document.getElementById("backgroundMusic");
 
-  // Fungsi untuk memainkan musik
-  function playMusic() {
-    backgroundMusic.play().then(() => {
-      playButton.textContent = "Playing..."; // Indikasi bahwa musik sedang diputar
-      playButton.classList.add("active");
-    }).catch(error => {
-      console.error("Error playing audio:", error);
-    });
-  }
-
-  // Fungsi untuk menghentikan musik
-  function stopMusic() {
-    backgroundMusic.pause();
-    backgroundMusic.currentTime = 0;
-    playButton.textContent = "Play Music";
-    playButton.classList.remove("active");
-  }
-
-  // Fungsi untuk mengganti musik berdasarkan pilihan pengguna
-  function changeMusic() {
-    backgroundMusic.src = musicSelector.value; // Mengatur sumber audio berdasarkan pilihan
-    playMusic(); // Mulai musik baru yang dipilih
-  }
-
-  // Event listener untuk tombol Play Music
-  playButton.addEventListener("click", playMusic);
-
-  // Event listener untuk tombol Stop Music
-  stopButton.addEventListener("click", stopMusic);
-
-  // Event listener untuk dropdown pemilih musik
-  musicSelector.addEventListener("change", changeMusic);
-
-  // Memulai musik pertama kali saat halaman dimuat
+  // Auto play music on page load
   window.addEventListener("load", () => {
-    backgroundMusic.src = musicSelector.value;
-    playMusic();
-    });
-   });
+    backgroundMusic.play();
+  });
+
+  // Play Music Button
+  playButton.addEventListener("click", () => {
+    backgroundMusic.play();
+  });
+
+  // Stop Music Button
+  stopButton.addEventListener("click", () => {
+    backgroundMusic.pause();
+    backgroundMusic.currentTime = 0; // Reset to the start
+  });
 
   // JavaScript for displaying the zoomed-in certificate image in the modal
   document.addEventListener("DOMContentLoaded", function() {
