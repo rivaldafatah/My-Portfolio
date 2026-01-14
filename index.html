@@ -232,6 +232,43 @@
         padding: 40px 20px;
       }
     }
+
+    /* Custom Styling for Pagination (consistent with Certificates) */
+.pagination {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.pagination .page-item {
+  margin: 0 5px;
+}
+
+.pagination .page-item .page-link {
+  background-color: #212121;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  font-size: 16px;
+  padding: 8px 16px;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.pagination .page-item .page-link:hover {
+  background-color: #ffcc00;
+  border-color: #ffcc00;
+}
+
+.pagination .page-item.active .page-link {
+  background-color: #ffcc00;
+  border-color: #ffcc00;
+}
+
+.pagination .page-item.disabled .page-link {
+  background-color: #121212;
+  color: #777;
+  border-color: #777;
+}
+
     
   </style>
 </head>
@@ -589,6 +626,183 @@
   </div>
 </div>
 
+<!-- Projects Contribution In QA Section -->
+<section id="projects" class="py-5" data-aos="flip-up">
+  <div class="container text-center">
+    <h2 class="section-heading">Projects Contribution In QA</h2>
+
+    <!-- TAB PAGINATION -->
+    <ul class="nav nav-tabs justify-content-center mt-4" id="qaTabs" role="tablist">
+      <li class="nav-item">
+        <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#qaPage1" type="button">
+          1
+        </button>
+      </li>
+      <li class="nav-item">
+        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#qaPage2" type="button">
+          2
+        </button>
+      </li>
+      <li class="nav-item">
+        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#qaPage3" type="button">
+          3
+        </button>
+      </li>
+    </ul>
+
+    <!-- TAB CONTENT -->
+    <div class="tab-content mt-4">
+
+      <!-- PAGE 1 -->
+      <div class="tab-pane fade show active" id="qaPage1">
+        <div class="row g-4 justify-content-center">
+
+          <!-- Project 1 -->
+          <div class="col-md-4">
+            <div class="card bg-dark text-white shadow">
+              <img src="image/QA/Suzuki.png" class="card-img-top project-img" alt="QA Project">
+              <div class="card-body">
+                <h5 class="card-title">QA Testing For SIM Traceability Monitoring System</h5>
+                <p class="card-text">
+                  Testing and ensuring stability, performance, and functionality for the printing service app.
+                </p>
+                <a href="suzuki-details.html" class="btn btn-primary">Go to Details</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="col-md-4">
+            <div class="card bg-dark text-white shadow">
+              <img src="image/QA/fnf.png" class="card-img-top project-img" alt="QA Project">
+              <div class="card-body">
+                <h5 class="card-title">QA Testing for Iventory Management System</h5>
+                <p class="card-text">
+                  Quality assurance testing for document conversion and validation workflows.
+                </p>
+                <a href="fnf-details.html" class="btn btn-primary">Go to Details</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="col-md-4">
+            <div class="card bg-dark text-white shadow">
+              <img src="image/QA/RFID.png" class="card-img-top project-img" alt="QA Project">
+              <div class="card-body">
+                <h5 class="card-title">QA Testing for RFID (Radio Frequency Identification) System</h5>
+                <p class="card-text">
+                  Manual and automation testing for inventory and procurement systems.
+                </p>
+                <a href="rfid.html" class="btn btn-primary">Go to Details</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- PAGE 2 -->
+      <div class="tab-pane fade" id="qaPage2">
+        <div class="row g-4 justify-content-center">
+
+          <!-- Project 4 -->
+          <div class="col-md-4">
+            <div class="card bg-dark text-white shadow">
+              <img src="image/QA/project2.jpg" class="card-img-top project-img" alt="QA Project">
+              <div class="card-body">
+                <h5 class="card-title">API Automation Testing</h5>
+                <p class="card-text">
+                  Automated API testing using Postman and Katalon.
+                </p>
+                <a href="qa-project-details.html" class="btn btn-primary">Go to Details</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 5 -->
+          <div class="col-md-4">
+            <div class="card bg-dark text-white shadow">
+              <img src="image/QA/project2.jpg" class="card-img-top project-img" alt="QA Project">
+              <div class="card-body">
+                <h5 class="card-title">Regression Testing</h5>
+                <p class="card-text">
+                  Ensuring system stability after feature enhancements.
+                </p>
+                <a href="qa-project-details.html" class="btn btn-primary">Go to Details</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 6 -->
+          <div class="col-md-4">
+            <div class="card bg-dark text-white shadow">
+              <img src="image/QA/project2.jpg" class="card-img-top project-img" alt="QA Project">
+              <div class="card-body">
+                <h5 class="card-title">User Acceptance Testing</h5>
+                <p class="card-text">
+                  Validating system readiness before production release.
+                </p>
+                <a href="qa-project-details.html" class="btn btn-primary">Go to Details</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- PAGE 3 -->
+      <div class="tab-pane fade" id="qaPage3">
+        <div class="row g-4 justify-content-center">
+
+          <!-- Project 7 -->
+          <div class="col-md-4">
+            <div class="card bg-dark text-white shadow">
+              <img src="image/QA/project3.jpg" class="card-img-top project-img" alt="QA Project">
+              <div class="card-body">
+                <h5 class="card-title">Performance Testing</h5>
+                <p class="card-text">
+                  Load and stress testing for application reliability.
+                </p>
+                <a href="qa-project-details.html" class="btn btn-primary">Go to Details</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 8 -->
+          <div class="col-md-4">
+            <div class="card bg-dark text-white shadow">
+              <img src="image/QA/project3.jpg" class="card-img-top project-img" alt="QA Project">
+              <div class="card-body">
+                <h5 class="card-title">Performance Testing</h5>
+                <p class="card-text">
+                  Load and stress testing for application reliability.
+                </p>
+                <a href="qa-project-details.html" class="btn btn-primary">Go to Details</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 9 -->
+          <div class="col-md-4">
+            <div class="card bg-dark text-white shadow">
+              <img src="image/QA/project3.jpg" class="card-img-top project-img" alt="QA Project">
+              <div class="card-body">
+                <h5 class="card-title">Performance Testing</h5>
+                <p class="card-text">
+                  Load and stress testing for application reliability.
+                </p>
+                <a href="qa-project-details.html" class="btn btn-primary">Go to Details</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Certificates Section with Tabs -->
 <section id="certificates" class="py-5 certificates-container" data-aos="fade-up">
   <div class="container text-center">
@@ -906,6 +1120,103 @@
       });
     });
   });
+
+  // Fungsi untuk menampilkan halaman proyek tertentu
+  function showPage(page) {
+    // Sembunyikan semua proyek
+    allProjects.forEach((project, index) => {
+      project.style.display = "none"; // Sembunyikan proyek
+      // Menampilkan proyek yang sesuai dengan halaman yang dipilih
+      if (index >= (page - 1) * projectsPerPage && index < page * projectsPerPage) {
+        project.style.display = "block"; // Tampilkan proyek
+      }
+    });
+
+    // Update button pagination
+    document.querySelectorAll(".page-item").forEach((button) => {
+      button.classList.remove("active");
+    });
+
+    document.getElementById("page-" + page).classList.add("active");
+
+    // Disabled/Enable previous and next buttons
+    if (page === 1) {
+      document.getElementById("prev-btn").classList.add("disabled");
+    } else {
+      document.getElementById("prev-btn").classList.remove("disabled");
+    }
+
+    if (page === totalPages) {
+      document.getElementById("next-btn").classList.add("disabled");
+    } else {
+      document.getElementById("next-btn").classList.remove("disabled");
+    }
+  }
+
+  // Menampilkan halaman pertama saat halaman dimuat
+  showPage(1);
+
+  // Event listener untuk tombol Previous dan Next
+  document.getElementById("prev-btn").addEventListener("click", () => {
+    let currentPage = document.querySelector(".page-item.active").id.split("-")[1];
+    if (currentPage > 1) {
+      showPage(parseInt(currentPage) - 1);
+    }
+  });
+
+  document.getElementById("next-btn").addEventListener("click", () => {
+    let currentPage = document.querySelector(".page-item.active").id.split("-")[1];
+    if (currentPage < totalPages) {
+      showPage(parseInt(currentPage) + 1);
+    }
+  });
+
+// Function to update the pagination buttons
+function updatePagination(page) {
+  // Disable/enable previous button
+  document.getElementById('prev-btn').classList.toggle('disabled', page === 1);
+
+  // Disable/enable next button
+  document.getElementById('next-btn').classList.toggle('disabled', page === totalPages);
+
+  // Set the active page
+  document.querySelectorAll('.page-item').forEach(item => {
+    item.classList.remove('active');
+  });
+  document.getElementById('page-' + page).classList.add('active');
+}
+
+// Handle page number clicks
+document.querySelectorAll('.page-item').forEach(item => {
+  item.addEventListener('click', function (event) {
+    const page = parseInt(event.target.innerText);
+    if (!isNaN(page)) {
+      currentPage = page;
+      showProjects(currentPage);
+    }
+  });
+});
+
+// Handle previous button click
+document.getElementById('prev-btn').addEventListener('click', function () {
+  if (currentPage > 1) {
+    currentPage--;
+    showProjects(currentPage);
+  }
+});
+
+// Handle next button click
+document.getElementById('next-btn').addEventListener('click', function () {
+  if (currentPage < totalPages) {
+    currentPage++;
+    showProjects(currentPage);
+  }
+});
+
+// Initialize the first page
+showProjects(currentPage);
+
+
 </script>
 </body>
 </html>
