@@ -27,15 +27,15 @@
     .section img {
       border-radius: 10px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-      width: 80%; /* Ukuran gambar 80% */
+      width: 80%;
       margin-bottom: 30px;
-      display: block; /* Gambar menjadi block agar bisa terpusat */
+      display: block;
       margin-left: auto;
       margin-right: auto;
     }
 
     .back-btn {
-      display: inline-block; /* Tombol akan berada di samping teks */
+      display: inline-block;
       margin-top: 20px;
       padding: 10px 20px;
       background-color: #3498db;
@@ -45,7 +45,7 @@
       border-radius: 5px;
       text-decoration: none;
       transition: background-color 0.3s;
-      text-align: center; /* Menyelaraskan tombol dengan konten */
+      text-align: center;
     }
 
     .back-btn:hover {
@@ -55,6 +55,123 @@
     .section .text-content {
       text-align: justify;
     }
+
+    .tools-icon {
+      display: inline-block;
+      margin: 5px;
+    }
+
+    .tools-icon img {
+      width: 40px;
+      height: 40px;
+    }
+
+    .tool-card {
+      background: linear-gradient(145deg, #1c1c1c, #242424);
+      border-radius: 16px;
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      box-shadow: 0 10px 28px rgba(0,0,0,0.45);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      margin-bottom: 20px;
+    }
+
+    .tool-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 36px rgba(0,0,0,0.6);
+    }
+
+    .tool-icon img {
+      width: 60px;
+      height: 60px;
+    }
+
+    .tool-text h6 {
+      margin: 0;
+      font-weight: 600;
+      color: #ffffff;
+    }
+
+    .tool-text p {
+      margin: 2px 0 0;
+      font-size: 0.85rem;
+      color: #b5b5b5;
+    }
+
+   /* Bagian umum untuk keseluruhan card test case & Find Bug */
+.overview-section {
+  padding: 10px;
+  color: #fff;
+}
+
+.overview-card {
+  background-color: #1f1f1f;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* Mengurangi jarak antar elemen di dalam card */
+}
+
+.overview-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 36px rgba(0,0,0,0.6);
+}
+
+.overview-card {
+  background: linear-gradient(145deg, #1c1c1c, #242424);
+  border-radius: 16px;
+  padding: 15px 20px; /* Menyesuaikan padding untuk lebih rapat */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px; /* Menjaga jarak lebih rapat antara elemen */
+  box-shadow: 0 10px 28px rgba(0,0,0,0.45);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.overview-card h5 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0; /* Mengurangi margin agar lebih rapat */
+}
+
+.overview-card p {
+  font-size: 24px;
+  font-weight: 500;
+  margin-top: 5px;
+}
+
+.card-icon {
+  margin-bottom: 10px; /* Mengurangi jarak bawah untuk ikon */
+}
+
+/* Mengubah ukuran ikon pada kartu Test Cases dan Bugs Found agar serupa dengan Tools & Tech */
+.card-icon img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 5px; /* Mengurangi jarak bawah setelah ikon */
+}
+
+/* Responsif untuk ukuran layar kecil */
+@media (max-width: 767px) {
+  .col-md-6 {
+    margin-bottom: 15px;
+  }
+
+  /* Menyesuaikan ukuran ikon pada layar kecil */
+  .card-icon img {
+    width: 50px;
+    height: 50px;
+  }
+}
   </style>
 </head>
 <body>
@@ -68,26 +185,176 @@
       
       <!-- Deskripsi proyek di bawah gambar -->
       <div class="text-content">
-        <p><strong>Overview:</strong> In this project, I conducted thorough testing of the Printing Service Ordering Application. The focus was on ensuring the functionality, performance, and security of the application.</p>
+        <p><strong>Overview:</strong> The RFID Tracking System is an integrated platform designed to manage and monitor asset 
+          movements using RFID technology across multiple operational areas. The system consists of a mobile application running 
+          on a handheld RFID reader and a web-based monitoring dashboard. Through the mobile handheld device, operators can register 
+          new RFID tags and perform transactional movements such as inbound and outbound transfers between different areas by scanning 
+          RFID tags. Each scanning activity is automatically recorded and synchronized with the central system. The web application provides 
+          real-time monitoring of tag movements, enabling administrators and operational teams to track item locations, view transaction history, 
+          and manage master data such as tags, areas, and related asset information. This system improves traceability, operational visibility, and
+           accuracy in tracking item movements across different locations.</p>
 
         <h4>Testing Types</h4>
         <ul>
-          <li><strong>Manual Testing</strong> for feature functionality</li>
-          <li><strong>Regression Testing</strong> for existing features after updates</li>
-          <li><strong>Performance Testing</strong> under high user load</li>
-          <li><strong>Security Testing</strong> to ensure data protection</li>
+          <li><strong>Functional Testing</strong> To ensure the software performs the functions it was designed for from the end user's perspective.</li>
+          <li><strong>Regression Testing</strong> Ensure code changes do not break existing features.</li>
+          <li><strong>Smoke Testing</strong> Quick testing to ensure crucial functions (build) are stable.</li>
+          <li><strong>Integration Testing</strong> a software testing method in which various units or modules of an application are combined and tested collectively to ensure that interactions, data flow, and communication between the modules are working correctly.</li>
+          <li><strong>User Acceptance Testing (UAT)</strong> Ensure that the application for each feature runs according to user needs.</li>
+          <li><strong>Sanity Testing</strong> ensure that the features that have been bug fixed by the developer</li>
         </ul>
-
-        <h4>Results</h4>
-        <p>This project helped identify and resolve over 30 critical bugs before release, ensuring a smooth user experience and delivering a high-quality product to the users.</p>
-        <p>Multiple issues were detected and resolved in key areas, ensuring optimal performance and security.</p>
       </div>
     </div>
   </div>
 
-  <!-- Tombol kembali ke Projects, sejajar dengan gambar dan teks -->
+      <!-- Bagian Overview Proyek -->
+    <div class="overview-section">
+      <div class="row">
+        <!-- Kartu Test Cases -->
+        <div class="col-md-6">
+          <div class="overview-card">
+            <div class="card-icon">
+              <img src="image/component-detail/test-case-icon.png" alt="Test Cases">
+            </div>
+            <h5>Total Test Cases</h5>
+            <p>152</p>
+          </div>
+        </div>
+
+        <!-- Kartu Bugs Found -->
+        <div class="col-md-6">
+          <div class="overview-card">
+            <div class="card-icon">
+              <img src="image/component-detail/find-bug-icon.png" alt="Bugs Found">
+            </div>
+            <h5>Total Bugs Found</h5>
+            <p>43</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+   <!-- Tools -->
+  <h4 class="mt-5 mb-3">Tools & Tech</h4>
+
+  <div class="row g-4">
+    <!-- Postman -->
+    <div class="col-md-3">
+      <div class="tool-card">
+        <div class="tool-icon">
+          <img src="image/tools/postman-icon.png" alt="Postman">
+        </div>
+        <div class="tool-text">
+          <h6>Postman</h6>
+          <p>API Testing</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chrome DevTools -->
+    <div class="col-md-3">
+      <div class="tool-card">
+        <div class="tool-icon">
+          <img src="image/tools/chrome-icon.png" alt="Chrome DevTools">
+        </div>
+        <div class="tool-text">
+          <h6>Chrome DevTools</h6>
+          <p>Debugging / Testing</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Google Sheets -->
+    <div class="col-md-3">
+      <div class="tool-card">
+        <div class="tool-icon">
+          <img src="image/tools/spreadsheet-icon.png" alt="Google Sheets">
+        </div>
+        <div class="tool-text">
+          <h6>Google Sheets</h6>
+          <p>Test Case Management / Bug Management</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- MQTT -->
+    <div class="col-md-3">
+      <div class="tool-card">
+        <div class="tool-icon">
+          <img src="image/tools/rfid-icon.png" alt="MQTT">
+        </div>
+        <div class="tool-text">
+          <h6>RFID Reader</h6>
+          <p>Scan / Detect RFID Tag (ID TAG)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row g-4">
+    <!-- Google Docs -->
+    <div class="col-md-3">
+      <div class="tool-card">
+        <div class="tool-icon">
+          <img src="image/tools/google-docs-icon.png" alt="Google Docs">
+        </div>
+        <div class="tool-text">
+          <h6>Google Docs</h6>
+          <p>Document Apps / Manual Book</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Imgur -->
+    <div class="col-md-3">
+      <div class="tool-card">
+        <div class="tool-icon">
+          <img src="image/tools/imgur-icon.png" alt="Imgur">
+        </div>
+        <div class="tool-text">
+          <h6>Imgur</h6>
+          <p>Evidence Management</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Jam -->
+    <div class="col-md-3">
+      <div class="tool-card">
+        <div class="tool-icon">
+          <img src="image/tools/jam-icon.png" alt="Jam">
+        </div>
+        <div class="tool-text">
+          <h6>Jam</h6>
+          <p>Evidence Management</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Notion -->
+    <div class="col-md-3">
+      <div class="tool-card">
+        <div class="tool-icon">
+          <img src="image/tools/notion-icon.png" alt="Notion">
+        </div>
+        <div class="tool-text">
+          <h6>Notion</h6>
+          <p>Project Management</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h4>Result</h4>
+  <p>Testing ensured accurate RFID tag registration, movement transactions (in/out), and real-time 
+    monitoring between the handheld RFID reader and the web dashboard. Several functional and data 
+    synchronization issues were identified and resolved, improving system reliability and ensuring 
+    accurate tracking of item movements across different areas.</p>
+
+  <!-- Tombol kembali ke Projects -->
   <a href="index.html" class="back-btn">Back</a>
 </section>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
