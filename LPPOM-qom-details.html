@@ -185,15 +185,9 @@
       
       <!-- Deskripsi proyek di bawah gambar -->
       <div class="text-content">
-        <p><strong>Overview:</strong> The Halal Certificate Digital System is a web-based platform developed to manage the 
-          process of issuing halal certificates for registered companies and their food products. The system supports 
-          the complete certification workflow, starting from product registration, laboratory testing verification, 
-          halal audit evaluation, and final certificate issuance once all requirements are fulfilled. Through this 
-          platform, authorized users can manage company data, product information, and certification documentation in 
-          a structured digital process. The system helps streamline the halal certification workflow, ensuring 
-          transparency and proper documentation throughout the evaluation and approval stages. In this project, 
-          testing activities included both manual testing and automation testing using Katalon Studio to validate 
-          system functionality, workflow processes, and overall system stability.</p>
+        <p><strong>Overview:</strong> The Quotation Order Management (QOM) module is one of 10 modules within the microservices-based LPPOM Digital Platform. This module is responsible for managing the quotation and sales order process based on lead data received from the CRM module.
+          In the QOM module, users can generate quotations from qualified leads and process them into sales orders. The system supports complex pricing calculations based on predefined formulas, including discounts, markups, grand totals, as well as tax calculations such as VAT (PPN) and PPh23.
+          Additionally, the module allows users to create invoices with flexible payment schemes, including full payment or installment (term-based) options with percentage-based calculations. Once the process reaches the sales order stage, the data is further integrated into the ARP (Audit Resource Planning) module for auditing purposes, ensuring a complete and traceable business workflow.</p>
 
         <h4>Testing Types</h4>
         <ul>
@@ -347,13 +341,9 @@
   </div>
 
   <h4>Result</h4>
-  <p>Through comprehensive testing of the Halal Certificate Digital System, key modules including company 
-    registration, product verification, halal audit workflow, and certificate issuance were successfully 
-    validated. The testing process ensured that the certification workflow operated correctly from product 
-    submission to final approval. Automation testing using Katalon Studio was implemented to improve testing 
-    efficiency and validate critical system functionalities consistently. As a result, the system achieved 
-    improved reliability, smoother workflow execution, and better readiness for supporting the digital halal 
-    certification process.</p>
+  <p>Testing activities successfully ensured that all core functionalities within the QOM module operated as expected, including quotation creation, sales order processing, and invoice management. Integration testing confirmed that lead data from the CRM module and price simulation data submitted from the HAM mobile application were accurately received and displayed within the QOM module.
+    The QA process also validated all pricing and financial calculations, ensuring they were aligned with predefined formulas, including price calculation, discount, markup, grand total, as well as tax computations such as VAT (PPN) and PPh23. In addition, invoice generation was thoroughly tested for both payment types—full payment and installment (term-based)—ensuring that percentage-based calculations were correctly applied.
+    Furthermore, testing verified that all finalized data from the QOM module was successfully integrated into the ARP (Audit Resource Planning) module, enabling proper auditing processes. Overall, the system demonstrated accurate data processing, reliable cross-module integration, and correct financial calculations across the entire workflow.</p>
 
   <!-- Tombol kembali ke Projects -->
   <a href="index.html" class="back-btn">Back</a>
