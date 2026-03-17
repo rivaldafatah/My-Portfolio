@@ -185,15 +185,9 @@
       
       <!-- Deskripsi proyek di bawah gambar -->
       <div class="text-content">
-        <p><strong>Overview:</strong> The Halal Certificate Digital System is a web-based platform developed to manage the 
-          process of issuing halal certificates for registered companies and their food products. The system supports 
-          the complete certification workflow, starting from product registration, laboratory testing verification, 
-          halal audit evaluation, and final certificate issuance once all requirements are fulfilled. Through this 
-          platform, authorized users can manage company data, product information, and certification documentation in 
-          a structured digital process. The system helps streamline the halal certification workflow, ensuring 
-          transparency and proper documentation throughout the evaluation and approval stages. In this project, 
-          testing activities included both manual testing and automation testing using Katalon Studio to validate 
-          system functionality, workflow processes, and overall system stability.</p>
+        <p><strong>Overview:</strong> The Halal Agent Management (HAM) module is one of 10 modules within a microservices-based LPPOM Digital Platform. This module is designed to manage and monitor agent activities through both web and mobile applications in an integrated system.
+          On the web platform, HAM supports agent data management and submission processes with three user roles: Leader, MHO, and Agent. Meanwhile, the mobile application enables agents to monitor activities, manage submissions, and use a price simulator feature to estimate quotation values.
+          The HAM module is fully integrated with other modules, where submission data is automatically synchronized with the CRM module, and quotation simulations are connected to the Quotation Order Management (QOM) module. This integration ensures a seamless workflow across modules for better monitoring, data consistency, and operational efficiency.</p>
 
         <h4>Testing Types</h4>
         <ul>
@@ -347,13 +341,9 @@
   </div>
 
   <h4>Result</h4>
-  <p>Through comprehensive testing of the Halal Certificate Digital System, key modules including company 
-    registration, product verification, halal audit workflow, and certificate issuance were successfully 
-    validated. The testing process ensured that the certification workflow operated correctly from product 
-    submission to final approval. Automation testing using Katalon Studio was implemented to improve testing 
-    efficiency and validate critical system functionalities consistently. As a result, the system achieved 
-    improved reliability, smoother workflow execution, and better readiness for supporting the digital halal 
-    certification process.</p>
+  <p>Testing activities successfully ensured that all core functionalities within the HAM module operated as expected across both web and mobile platforms, including agent data management, submission processes, and role-based access for Leader, MHO, and Agent.
+    Integration testing confirmed that submission data created in the HAM module was accurately synchronized and continued seamlessly into the CRM module, supporting a consistent end-to-end workflow. Additionally, validation of the price simulator feature on the mobile application ensured that all quotation estimations were calculated correctly based on the predefined formulas and aligned with the QOM module.
+    Overall, the system demonstrated stable performance, reliable data flow between modules, and accurate calculation results, supporting efficient and integrated business processes.</p>
 
   <!-- Tombol kembali ke Projects -->
   <a href="index.html" class="back-btn">Back</a>
