@@ -8,12 +8,11 @@
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
   <style>
-    /* Dark Mode Styling */
     body, html {
       background-color: #121212;
       margin: 0;
       padding: 0;
-      overflow-x: hidden; /* Prevent horizontal scroll */
+      overflow-x: hidden;
       color: #ffffff;
     }
 
@@ -25,34 +24,30 @@
       color: #ffffff !important;
     }
 
-    /* Navbar Brand dan Hamburger Button Responsiveness */
     .navbar-brand {
-      font-size: 1.2rem; /* Ukuran default untuk layar besar */
+      font-size: 1.2rem; 
     }
 
     .navbar-toggler {
-      padding: 0.25rem 0.5rem; /* Mengurangi padding agar lebih kecil */
-      font-size: 1.2rem; /* Mengurangi ukuran font ikon hamburger */
+      padding: 0.25rem 0.5rem; 
+      font-size: 1.2rem; 
     }
 
-    /* Navbar responsiveness fix */
     .navbar .nav-item {
-      margin-right: 0; /* Reset margin for items if any issues */
+      margin-right: 0; 
     }
 
     .navbar .btn {
-      white-space: nowrap; /* Prevent button text from wrapping */
+      white-space: nowrap; 
     }
 
-    /* Fix for overflow of navbar buttons */
     .navbar-nav {
-      flex-wrap: wrap; /* Allow wrapping in mobile view */
-      justify-content: center; /* Center items if needed */
+      flex-wrap: wrap;
+      justify-content: center;
     }
 
-    /* Jumbotron with GIF Background */
     .jumbotron {
-      padding: 5rem 1rem; /* Increase padding to avoid navbar overlap */
+      padding: 5rem 1rem;
       text-align: center;
       color: #ffffff;
       position: relative;
@@ -61,21 +56,19 @@
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      min-height: 100vh; /* Ensure the jumbotron takes full height of viewport */
+      min-height: 100vh;
       width: 100%;
     }
 
-    /* Adjust Profile Picture */
     .profile-pic {
       width: 150px;
       height: 150px;
       border-radius: 50%;
       object-fit: cover;
-      margin-top: 80px; /* Increased margin to avoid navbar overlap */
+      margin-top: 80px;
       border: 3px solid #ffffff;
     }
 
-    /* Typing Animation */
     .typing {
       display: inline-block;
       white-space: nowrap;
@@ -140,13 +133,11 @@
       transform: translate(0);
     }
 
-    /* Mengatur lebar awal progress bar ke 0 */
     .progress-bar-fill {
       width: 0;
       transition: width 2s ease;
     }
 
-    /* Animasi dan gaya project */
     .card-img-top {
       height: 200px;
       object-fit: cover;
@@ -158,25 +149,22 @@
       opacity: 0.9;
     }
 
-    /* Modal Image Styling */
     #modalImage {
       max-height: 90vh;
       width: 100%;
       object-fit: contain;
     }
 
-      /* Jarak antara elemen musik selector dan tombol play */
     #musicSelector {
-      margin-right: 10px; /* Tambah jarak */
+      margin-right: 10px;
     }
 
 
     /* Responsive Styling */
     @media (max-width: 768px) {
-      /* Ensure profile picture is below the navbar */
       .profile-pic {
-        margin-top: 120px; /* Adjust to ensure enough space */
-        width: 120px; /* Smaller profile picture on smaller screens */
+        margin-top: 120px; 
+        width: 120px;
         height: 120px;
       }
 
@@ -185,15 +173,15 @@
       }
 
       .navbar-brand {
-      font-size: 1.1rem; /* Perkecil ukuran teks navbar brand */
+      font-size: 1.1rem; 
       }
 
       .navbar-toggler {
-        position: absolute; /* Position the hamburger button on the right */
+        position: absolute;
         right: 1rem;
         top: 1rem;
-        padding: 0.2rem 0.4rem; /* Perkecil padding tombol hamburger */
-        font-size: 1rem; /* Perkecil ukuran ikon hamburger */
+        padding: 0.2rem 0.4rem;
+        font-size: 1rem;
       }
 
       .section-heading {
@@ -216,7 +204,6 @@
       }
     }
 
-    /* Footer Styling */
     .footer {
       padding: 40px 20px;
     }
@@ -233,7 +220,6 @@
       }
     }
 
-    /* Custom Styling for Pagination (consistent with Certificates) */
 .pagination {
   display: flex;
   justify-content: center;
@@ -269,7 +255,6 @@
   border-color: #777;
 }
 
-/* Education logo fix */
 #education .card-img-top {
   height: 200px;
   object-fit: contain;
@@ -318,17 +303,13 @@
   </div>
 </nav>
 
-<!-- Audio Element -->
 <audio id="backgroundMusic" loop></audio>
 
-
-<!-- Jumbotron with GIF Background -->
 <div class="jumbotron">
   <div class="container">
     <img src="image/Pasfoto.jpg" alt="Profile Picture" class="profile-pic mb-3">
     <h1 class="display-4">Rivalda Fatah Rachman Hernawan</h1>
     <p class="lead typing">Software Development & Quality Assurance</p>
-    <!-- Social Media Icons -->
     <div class="social-icons">
       <a href="https://www.instagram.com/rivalda_fatah/" target="_blank"><i class="fab fa-instagram"></i></a>
       <a href="https://www.linkedin.com/in/rivalda-fatah/" target="_blank"><i class="fab fa-linkedin"></i></a>
@@ -339,7 +320,7 @@
     </div>
   </div>
     <!-- Real-time Clock Display -->
-    <div id="clock" class="mt-4 fs-5 text-light"></div> <!-- Gaya tambahan untuk waktu -->
+    <div id="clock" class="mt-4 fs-5 text-light"></div>
   </div>
 </div>
 
@@ -450,7 +431,6 @@
     </div>
   </div>
 </section>
-
 
 <!-- Experience Section -->
 <section id="experience" class="py-5" data-aos="zoom-in-up">
@@ -1036,7 +1016,7 @@
 <script>
   AOS.init({
     duration: 1000,
-    once: false, // Animasi berfungsi setiap kali bagian terlihat
+    once: false,
   });
 
   document.addEventListener("DOMContentLoaded", function () {
